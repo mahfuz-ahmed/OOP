@@ -42,20 +42,20 @@ namespace OOP
             Console.WriteLine(fullName);
             Console.WriteLine();
 
-            ValueType_RefferenceType refferenceType3 = refferenceType1;   // This refference indicate to refferenceType1 Object
+            ValueType_RefferenceType refferenceType3 = refferenceType1;                 // This refference indicate to refferenceType1 Object
 
-            refferenceType3.lastName = "Changed";       // LastName changed in the refferenceType1 object
+            refferenceType3.lastName = "Changed";                                       // LastName changed in the refferenceType1 object
 
-            fullName = refferenceType1.FullName();    // Here Changed the value in the refferenceType1 Object
+            fullName = refferenceType1.FullName();                                      // Here Changed the value in the refferenceType1 Object
             Console.WriteLine(fullName);
-            fullName = refferenceType3.FullName();   // Those refference indicate to the same object thats whay, if change any refferences changed to both
+            fullName = refferenceType3.FullName();                                      // Those refference indicate to the same object thats whay, if change any refferences changed to both
             Console.WriteLine(fullName);
             Console.WriteLine();
 
             //Value Type 
             Console.WriteLine("Value Type Refference Type");
             int firstNumber = 200;
-            int secondNumber = firstNumber;   // Create a new memory location for second number, so if change to firsNumber not empact to secondNumber
+            int secondNumber = firstNumber;                                             // Create a new memory location for second number, so if change to firsNumber not empact to secondNumber
             firstNumber = 500;
 
             Console.WriteLine("Second Number = "+secondNumber);
