@@ -5,3 +5,6 @@ D:\ASP.NET\C# GitHub\OOP\OOP\OOP\obj\Debug\OOP.csproj.AssemblyReference.cache
 D:\ASP.NET\C# GitHub\OOP\OOP\OOP\obj\Debug\OOP.csproj.CoreCompileInputs.cache
 D:\ASP.NET\C# GitHub\OOP\OOP\OOP\obj\Debug\OOP.exe
 D:\ASP.NET\C# GitHub\OOP\OOP\OOP\obj\Debug\OOP.pdb
+D:\ASP.NET\C# GitHub\OOP\OOP\OOP\bin\Debug\YamlDotNet.dll
+D:\ASP.NET\C# GitHub\OOP\OOP\OOP\bin\Debug\YamlDotNet.xml
+D:\ASP.NET\C# GitHub\OOP\OOP\OOP\obj\Debug\OOP.csproj.CopyComplete

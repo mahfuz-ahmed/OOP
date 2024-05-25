@@ -13,7 +13,7 @@ namespace OOP
         {
             string fullName;
             // Object
-            Console.WriteLine("Object Concept");
+            Console.WriteLine("...Object Concept...");
 
             Person person = new Person();   // person is a refference in the  Person Type
             person.firstName = "Md.";
@@ -24,7 +24,7 @@ namespace OOP
             Console.WriteLine();
 
             //Refference Type / User Define Type
-            Console.WriteLine("Value Type And Refference Type.");
+            Console.WriteLine("...Refference Type / User Define Type / Non-primitive...");
 
             ValueType_RefferenceType refferenceType1 = new ValueType_RefferenceType();   // Create New instance or empty object in the memory
             refferenceType1.firstName = "Abdul";                                         // Initializing value in the empty object
@@ -53,13 +53,28 @@ namespace OOP
             Console.WriteLine();
 
             //Value Type 
-            Console.WriteLine("Value Type Refference Type");
+            Console.WriteLine("...Value Type / Premitive Type...");
             int firstNumber = 200;
             int secondNumber = firstNumber;                                             // Create a new memory location for second number, so if change to firsNumber not empact to secondNumber
             firstNumber = 500;
 
             Console.WriteLine("Second Number = "+secondNumber);
             Console.WriteLine("After Change firstNumber = "+firstNumber);
+
+
+            //Encapsulation / Property
+            Console.WriteLine("...Encapsulation...");
+            Encapsulation encapsulation = new Encapsulation();
+            encapsulation.FirstName = "Mahfuz";
+            encapsulation.FatherName = "Md.Nobis Uddin";
+            Console.WriteLine("My Name: "+ encapsulation.FirstName);
+            Console.WriteLine("Father Name: "+encapsulation.FatherName);
+
+
+
+
+
+
 
             Console.ReadLine(); 
         }
