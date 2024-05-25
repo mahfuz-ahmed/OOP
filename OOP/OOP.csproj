@@ -46,7 +46,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Classes\Encapsulation.cs" />
+    <Compile Include="Classes\Encapsulation&amp;Constructor.cs" />
     <Compile Include="Classes\Person.cs" />
     <Compile Include="Classes\ValueType_RefferenceType.cs" />
     <Compile Include="Program.cs" />
