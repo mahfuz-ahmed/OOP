@@ -1,0 +1,7 @@
+D:\ASP.NET\C# GitHub\OOP\OOP\OOP\bin\Debug\OOP.exe.config
+D:\ASP.NET\C# GitHub\OOP\OOP\OOP\bin\Debug\OOP.exe
+D:\ASP.NET\C# GitHub\OOP\OOP\OOP\bin\Debug\OOP.pdb
+D:\ASP.NET\C# GitHub\OOP\OOP\OOP\obj\Debug\OOP.csproj.AssemblyReference.cache
+D:\ASP.NET\C# GitHub\OOP\OOP\OOP\obj\Debug\OOP.csproj.CoreCompileInputs.cache
+D:\ASP.NET\C# GitHub\OOP\OOP\OOP\obj\Debug\OOP.exe
+D:\ASP.NET\C# GitHub\OOP\OOP\OOP\obj\Debug\OOP.pdb
