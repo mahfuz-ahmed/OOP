@@ -15,7 +15,7 @@ namespace OOP
             // Object
             Console.WriteLine("...Object Concept...");
 
-            Person person = new Person();   // person is a refference in the  Person Type
+            Person person = new Person();                                                // person is a refference in the  Person Type
             person.firstName = "Md.";
             person.middleName = "Mahfuz";
             person.lastName = "Ahmed";
@@ -64,15 +64,12 @@ namespace OOP
 
             //Encapsulation / Property
             Console.WriteLine("...Encapsulation...");
-            Encapsulation encapsulation = new Encapsulation();
-            encapsulation.FirstName = "Mahfuz";
+            Encapsulation encapsulation = new Encapsulation("mahfuz","ahmed");          // Calling by constructor
+            //encapsulation.FirstName = "Mahfuz";
             encapsulation.FatherName = "Md.Nobis Uddin";
+            string motherName = encapsulation.MotherName;                               // You can not set motherName here, just you can get motherName
             Console.WriteLine("My Name: "+ encapsulation.FirstName);
             Console.WriteLine("Father Name: "+encapsulation.FatherName);
-
-
-
-
 
 
 

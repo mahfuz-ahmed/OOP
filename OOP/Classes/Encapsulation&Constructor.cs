@@ -8,11 +8,20 @@ namespace OOP.Classes
 {
     public class Encapsulation
     {
-        private string _firstName;
+
+        // Constructor
+        public Encapsulation(string firstName, string lastName)
+        {
+            FirstName = firstName;
+            LastName = lastName;
+        }
+
+        private string _firstName;                              // class field
         private string _lastName;
         private string _gender;
 
-        public string FirstName                                    // Property Declear
+
+        public string FirstName                                // Property Declear
         {
             set 
             {
@@ -36,9 +45,15 @@ namespace OOP.Classes
             get { return _gender; }
         }
 
-        // Short Hand
+        public string FullName()
+        {
+            string fullName = FirstName + " " + LastName;
+            return fullName;
+        }
 
-        public string FatherName { set; get; }
-        public string MotherName { set; get; }
+        // Short Hand / Auto Property
+
+        public string FatherName { set; get; }              // No need to declear field
+        public string MotherName { private set; get; }      // If you want to private property you can do it 
     }
 }

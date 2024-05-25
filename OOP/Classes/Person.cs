@@ -1,4 +1,5 @@
-﻿using System;
+﻿using OOP.Classes;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -16,7 +17,7 @@ namespace OOP
         {
             string fullName = firstName + " "+ middleName +" "+ lastName ;
             return fullName;
-        }
+        }       
 
     }
 }
