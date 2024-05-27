@@ -72,6 +72,9 @@ namespace OOP
             Console.WriteLine("Father Name: "+encapsulation.FatherName);
 
 
+            Constructor constructor = new Constructor("Mahfuz");
+            Constructor constructor2 = new Constructor(32);
+            constructor2.MyDetails();
 
             Console.ReadLine(); 
         }
