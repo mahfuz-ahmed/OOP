@@ -9,23 +9,24 @@ namespace OOP.Classes
     public class Constructor
     {
         public string FirstName { get; set; }
+        public string LastName { get; set; }
         public int Age { get; set; }
-        public Constructor() { }
+        public Constructor() { }                                    //Default Constructor
 
-        public Constructor(string firstName)
+        public Constructor(string firstName, string lastName)       //Constructor Perameter
         {
             FirstName = firstName;
+            LastName = lastName;
         }
-        public Constructor(int age)
+        public Constructor(int age)                                 //Constructor Overload
         {
             Age = age;
         }
 
-        public void MyDetails()
+        public string MyDetails()
         {
-            string firstName = FirstName;
-            int age = Age;
-            Console.WriteLine(age);
+            string fullName = FirstName +" "+ LastName;
+            return fullName;
         }
     }
 }
