@@ -10,22 +10,22 @@ namespace OOP.Classes
     {
         public string FirstName { get; set; }
         public string LastName { get; set; }
-        public int Age { get; set; }
-        public Constructor() { }                                    //Default Constructor
+        public string Email { get; set; }
 
-        public Constructor(string firstName, string lastName)       //Constructor Perameter
+        public Constructor(string firstName, string lastName, string email):this(email)       //Constructor Perameter  //Constructor Chaining
         {
             FirstName = firstName;
             LastName = lastName;
         }
-        public Constructor(int age)                                 //Constructor Overload
+        public Constructor(string email) : this()                                //Constructor Overload  //Constructor Chaining
         {
-            Age = age;
+            Email = email;
         }
+        public Constructor() { }                                           //Default Constructor
 
         public string MyDetails()
         {
-            string fullName = FirstName +" "+ LastName;
+            string fullName = FirstName +" "+ LastName +" "+ Email;
             return fullName;
         }
     }

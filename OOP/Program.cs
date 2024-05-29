@@ -72,9 +72,19 @@ namespace OOP
             Console.WriteLine("Father Name: "+encapsulation.FatherName);
 
 
-            Constructor constructor = new Constructor("Md.","Ahmed");
+            Constructor constructor = new Constructor("Md.","Ahmed","mahfuz@gmial.com");
+            Constructor constructor1 = new Constructor("mahfuz@gmail.com");
             fullName = constructor.MyDetails();
             Console.WriteLine(fullName);
+
+            Constructor constructor2 = new Constructor();                               // Call Default Constructor
+            constructor2.FirstName = "Mahfuz";
+            constructor2.LastName = "Default Constractor";
+            fullName = constructor2.MyDetails();
+            Console.WriteLine(fullName);
+
+
+
 
             Console.ReadLine(); 
         }
