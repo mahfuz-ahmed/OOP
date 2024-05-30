@@ -17,11 +17,11 @@ namespace OOP.Classes
             FirstName = firstName;
             LastName = lastName;
         }
-        public Constructor(string email) : this()                                //Constructor Overload  //Constructor Chaining
+        public Constructor(string email) : this()                                             //Constructor Overload  //Constructor Chaining
         {
             Email = email;
         }
-        public Constructor() { }                                           //Default Constructor
+        public Constructor() { }                                                              //Default Constructor
 
         public string MyDetails()
         {
