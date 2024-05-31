@@ -16,6 +16,9 @@ namespace OOP
             assign.Constructor();
             assign.ValueAndRefferenceType();
             assign.Encapsulation();
+            assign.AssociationRelationShip();
+            assign.DepartmentRelationShip();
+
             Console.ReadLine(); 
         }
     }

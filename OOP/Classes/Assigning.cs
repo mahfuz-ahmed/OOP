@@ -32,11 +32,11 @@ namespace OOP.Classes
         public void Constructor()
         {
             Constructor constructor = new Constructor("Md.", "Ahmed", "mahfuz@gmial.com");
-            Constructor constructor1 = new Constructor("mahfuz@gmail.com");
+            Constructor constructor1 = new Constructor("mahfuz@gmail.com");                 //Over Load Constructor
             fullName = constructor.MyDetails();
             Console.WriteLine(fullName);
 
-            Constructor constructor2 = new Constructor();                               // Call Default Constructor
+            Constructor constructor2 = new Constructor();                                   // Call Default Constructor
             constructor2.FirstName = "Mahfuz";
             constructor2.LastName = "Default Constractor";
             fullName = constructor2.MyDetails();
@@ -86,9 +86,56 @@ namespace OOP.Classes
             Encapsulation encapsulation = new Encapsulation("mahfuz", "ahmed");          // Calling by constructor
             //encapsulation.FirstName = "Mahfuz";
             encapsulation.FatherName = "Md.Nobis Uddin";
-            string motherName = encapsulation.MotherName;                               // You can not set motherName here, just you can get motherName
+            string motherName = encapsulation.MotherName;                               // You can not set motherName here, just you can get motherName because setter is private
             Console.WriteLine("My Name: " + encapsulation.FirstName);
             Console.WriteLine("Father Name: " + encapsulation.FatherName);
+        }
+        public void AssociationRelationShip()
+        {
+
+            Information information = new Information();
+            information.Village = "KodailKati";
+            information.Thana = "Gangni";
+            information.District = "Meherpur";
+            information.NID = "12234566";
+
+            Person person = new Person();
+            person.firstName = "Md.";
+            person.middleName = "Mahfuz";
+            person.lastName = "Ahmed";
+            person.information = information;
+
+            Information information2 = information;         // Point to information refference
+            Console.WriteLine(information2.Village);
+            //Console.WriteLine(person.information.Thana);
+            Console.WriteLine(person.PersonDetails());
+        }
+        public void DepartmentRelationShip()
+        {
+            Console.WriteLine();
+            Console.WriteLine("Department and Courses");
+            List<Course> courses = new List<Course>();
+
+            Course course = new Course();
+            course.Name = "Data Structure";
+            course.Code = "DS-1";
+            course.Credit = "3";
+            courses.Add(course);
+
+            Course course1 = new Course();
+            course1.Name = "Algorithm";
+            course1.Code = "Alg-1";
+            course1.Credit = "3";
+            courses.Add(course1);
+
+            Department department = new Department();
+            department.Name = "Computer Science and Engineering";
+            department.Code = "CSE";
+            department.courses = courses;
+
+            department.getDepartment();
+            department.getCourse();
+
         }
 
     }
