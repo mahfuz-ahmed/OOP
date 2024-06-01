@@ -1,4 +1,5 @@
-﻿using System;
+﻿using OOP.Classes.Inheritance;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -135,6 +136,24 @@ namespace OOP.Classes
 
             department.getDepartment();
             department.getCourse();
+
+        }
+        public void BankingSystem()
+        {
+            SavingsAccount savingsAccount = new SavingsAccount();
+            savingsAccount.BankAccount = "Mh-123455";
+            savingsAccount.CustomerName = "Mahfuz Ahmed";
+            savingsAccount.InterestAmount = 500;
+            savingsAccount.Deposit(3000);
+            savingsAccount.Withdraw(1500);
+            Console.WriteLine("Total Balance: "+savingsAccount.Totalbalance());
+
+            CheckingAccount checkingAccount = new CheckingAccount();
+            checkingAccount.BankAccount = "Mh-45667889";
+            checkingAccount.ServiceCharge = 300;
+            checkingAccount.Deposit(1000);
+            checkingAccount.Withdraw(500);
+            Console.WriteLine(checkingAccount.Balance);
 
         }
 

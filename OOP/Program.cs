@@ -18,6 +18,7 @@ namespace OOP
             assign.Encapsulation();
             assign.AssociationRelationShip();
             assign.DepartmentRelationShip();
+            assign.BankingSystem();
 
             Console.ReadLine(); 
         }
