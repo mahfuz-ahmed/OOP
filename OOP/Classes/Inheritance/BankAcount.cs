@@ -13,17 +13,13 @@ namespace OOP.Classes.Inheritance
         public double Balance {  get; private set; }       
         public string Deposit(double amount)
         {
-            SavingsAccount account = new SavingsAccount();
-            double interest = account.InterestAmount;
-
-            Balance += amount+interest;
+            Balance += amount;
             return "Successfully amount added";
         }
-        public string Withdraw(double amount)
+        public virtual string Withdraw(double amount) 
         {
             Balance -= amount;
-            return "Successfully amount withdraw";
+            return "Success Fully WithDraw: " +amount+"Tk, Your Current Balance: "+ Balance +"Tk";
         }
-
     }
 }
