@@ -8,6 +8,15 @@ namespace OOP.Classes.Inheritance
 {
     public class BankAcount
     {
+        public BankAcount(string accountNumber, string customerName) : this() 
+        {
+            BankAccount = accountNumber;
+            CustomerName = customerName;
+        }
+        public BankAcount() 
+        {
+            Balance = 0;
+        }
         public string BankAccount {  get; set; }
         public string CustomerName {  get; set; }
         public double Balance {  get; private set; }       

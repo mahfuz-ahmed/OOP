@@ -143,20 +143,20 @@ namespace OOP.Classes
             Console.WriteLine();
 
             Console.WriteLine("Saving Account");
-            SavingsAccount savingsAccount = new SavingsAccount();
-            savingsAccount.BankAccount = "Mh-123455";
-            savingsAccount.CustomerName = "Mahfuz Ahmed";
-            savingsAccount.InterestAmount = 500;
-            savingsAccount.Deposit(5000);  
+
+            SavingsAccount savingsAccount = new SavingsAccount("MH-12334","MahfuzAhmed",1000);
+            //savingsAccount.BankAccount = "Mh-123455";
+            //savingsAccount.CustomerName = "Mahfuz Ahmed";
+            //savingsAccount.InterestAmount = 500;
+            savingsAccount.Deposit(5000);
             Console.WriteLine(savingsAccount.Withdraw(1500));
-            //Console.WriteLine("Total Balance: "+savingsAccount.Totalbalance());
 
             Console.WriteLine("Chgecking Account, No limit to withdrow mony");
-            CheckingAccount checkingAccount = new CheckingAccount();
-            checkingAccount.BankAccount = "Mh-45667889";
-            checkingAccount.ServiceCharge = 300;
-            checkingAccount.Deposit(1000);
-            Console.WriteLine(checkingAccount.Withdraw(5000));
+            CheckingAccount checkingAccount = new CheckingAccount("MH-122333","Najmus Sakib",500);
+            //checkingAccount.BankAccount = "Mh-45667889";
+            //checkingAccount.ServiceCharge = 300;
+            //checkingAccount.Deposit(1000);
+            //Console.WriteLine(checkingAccount.Withdraw(5000));
         }
 
     }
