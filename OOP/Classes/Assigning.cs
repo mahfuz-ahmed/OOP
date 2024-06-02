@@ -157,6 +157,22 @@ namespace OOP.Classes
             //checkingAccount.ServiceCharge = 300;
             //checkingAccount.Deposit(1000);
             //Console.WriteLine(checkingAccount.Withdraw(5000));
+
+            BankAcount bankAcount = new BankAcount();
+            bankAcount.BankAccount = "1234-MH";
+            bankAcount.CustomerName = "Sakib";
+            bankAcount.Deposit(700);
+
+            List<BankAcount> bankAcounts = new List<BankAcount>();   
+            bankAcounts.Add(bankAcount);
+            bankAcounts.Add(checkingAccount);
+            bankAcounts.Add(savingsAccount);
+
+            foreach (BankAcount acount in bankAcounts)   // Runtime Polymorphism // When get data from bankAcounts acount can deside its which type, savings/ Checking or Bank Account
+            {
+                acount.Withdraw(200);
+            }
+
         }
 
     }
