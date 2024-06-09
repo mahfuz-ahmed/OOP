@@ -17,5 +17,10 @@ namespace OOP.Classes.Inheritance
         }
 
         public double ServiceCharge { get; set; }
+
+        public override void Transfer(string from, string to, double amount, DateTime date)
+        {
+
+        }
     }
 }

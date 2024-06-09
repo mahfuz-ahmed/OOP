@@ -24,5 +24,10 @@ namespace OOP.Classes.Inheritance
             }
             return "Insufficient Balance, Your Current Balance: " + Balance + "Tk, Your Withdraw Amount:" + amount + "Tk";
         }
+
+        public override void Transfer(string from, string to, double amount, DateTime date)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

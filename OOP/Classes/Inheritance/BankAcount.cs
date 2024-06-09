@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace OOP.Classes.Inheritance
 {
-    public class BankAcount
+    public class BankAcount :AcountTransfer
     {
         public BankAcount(string accountNumber, string customerName) : this() 
         {
@@ -30,5 +30,15 @@ namespace OOP.Classes.Inheritance
             Balance -= amount;
             return "Success Fully WithDraw: " +amount+"Tk, Your Current Balance: "+ Balance +"Tk";
         }
+
+        public override void Transfer(string from, string to, double amount, DateTime date)
+        {
+            throw new NotImplementedException();
+        }
+    }
+    public abstract class AcountTransfer
+    {
+        public abstract void Transfer(string from, string to, double amount, DateTime date);
+
     }
 }
