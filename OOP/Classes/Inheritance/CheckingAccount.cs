@@ -1,4 +1,5 @@
-﻿using System;
+﻿using OOP.Classes.Inheritance;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -18,9 +19,5 @@ namespace OOP.Classes.Inheritance
 
         public double ServiceCharge { get; set; }
 
-        public override void Transfer(string from, string to, double amount, DateTime date)
-        {
-
-        }
     }
 }

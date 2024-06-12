@@ -1,4 +1,5 @@
 ﻿using OOP.Classes.Inheritance;
+using OOP.Classes.Interface;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -173,6 +174,19 @@ namespace OOP.Classes
                 acount.Withdraw(200);
             }
 
+        }
+        public void Interface()
+        {
+            string information;
+            Student student = new Student();
+            student.RegNo = "122222";
+            information = student.GetInformation();
+
+            Courses courses = new Courses();
+            information = courses.GetInformation();
+
+            Departments departments = new Departments();
+            information = departments.GetInformation();
         }
 
     }

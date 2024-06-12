@@ -31,6 +31,7 @@ namespace OOP.Classes.Inheritance
             return "Success Fully WithDraw: " +amount+"Tk, Your Current Balance: "+ Balance +"Tk";
         }
 
+        // must be override abstruct Transfer method body in this method because inherit abstruct class
         public override void Transfer(string from, string to, double amount, DateTime date)
         {
             throw new NotImplementedException();

@@ -1,11 +1,11 @@
-﻿using OOP.Classes;
+﻿    using OOP.Classes;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace OOP
+namespace OOP.Classes
 {
     public class Person
     {

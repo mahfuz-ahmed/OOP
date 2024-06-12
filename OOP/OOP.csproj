@@ -53,6 +53,10 @@
     <Compile Include="Classes\Inheritance\BankAcount.cs" />
     <Compile Include="Classes\Inheritance\CheckingAccount.cs" />
     <Compile Include="Classes\Inheritance\SavingsAccount.cs" />
+    <Compile Include="Classes\Interface\Courses.cs" />
+    <Compile Include="Classes\Interface\Departments.cs" />
+    <Compile Include="Classes\Interface\IInformation.cs" />
+    <Compile Include="Classes\Interface\Student.cs" />
     <Compile Include="Classes\OneToManyRelation\Course.cs" />
     <Compile Include="Classes\OneToManyRelation\Department.cs" />
     <Compile Include="Classes\Person.cs" />
