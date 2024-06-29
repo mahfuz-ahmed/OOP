@@ -181,6 +181,7 @@ namespace OOP.Classes
             Student student = new Student();
             student.RegNo = "122222";
             information = student.GetInformation();
+            Console.WriteLine(information);
 
             Courses courses = new Courses();
             information = courses.GetInformation();
