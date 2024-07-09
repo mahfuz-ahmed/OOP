@@ -183,12 +183,44 @@ namespace OOP.Classes
             information = student.GetInformation();
             Console.WriteLine(information);
 
+            Student student2 = new Student();
+            student.RegNo = "122222";
+            information = student.GetInformation();
+            Console.WriteLine(information);
+
             Courses courses = new Courses();
             information = courses.GetInformation();
 
             Departments departments = new Departments();
             information = departments.GetInformation();
         }
+        public void StudentCollection()
+        {
+            string information;
+            Student student = new Student();
+            student.RegNo = "122222";
+            information = student.GetInformation();
+            Console.WriteLine(information);
 
+            Student student2 = new Student();
+            student.RegNo = "122222";
+            information = student.GetInformation();
+            Console.WriteLine(information);
+
+            List<Student> studentList = new List<Student>()
+            {
+                student, student2
+            };
+            studentList.Add(student2);
+            studentList.Add(student);
+        }
+        public void VarKeyWord()
+        {
+            var name = "Mahfuz Ahemd"; //string
+            var id = 112244; // int
+            var IsAdmin = true; //boolean
+
+        }
+    
     }
 }

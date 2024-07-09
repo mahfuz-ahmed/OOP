@@ -55,6 +55,7 @@
     <Compile Include="Classes\Inheritance\SavingsAccount.cs" />
     <Compile Include="Classes\Interface\Courses.cs" />
     <Compile Include="Classes\Interface\Departments.cs" />
+    <Compile Include="Classes\Interface\IConvert.cs" />
     <Compile Include="Classes\Interface\IInformation.cs" />
     <Compile Include="Classes\Interface\Student.cs" />
     <Compile Include="Classes\OneToManyRelation\Course.cs" />
