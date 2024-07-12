@@ -20,7 +20,7 @@ namespace OOP
             assign.DepartmentRelationShip();
             assign.BankingSystem();
             assign.Interface();
-
+            assign.DynamicDataType();
             Console.ReadLine(); 
         }
     }

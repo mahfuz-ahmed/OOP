@@ -2,6 +2,7 @@
 using OOP.Classes.Interface;
 using System;
 using System.Collections.Generic;
+using System.Dynamic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -220,7 +221,29 @@ namespace OOP.Classes
             var id = 112244; // int
             var IsAdmin = true; //boolean
 
+        }      
+        public void DynamicDataType()
+        {
+            dynamic dynamicVariable = 1; // dynamic data type is run time data type. its work like obejct. dynamic keyword is this syntex.
+            Console.WriteLine(dynamicVariable + " Type is " +dynamicVariable.GetType());
+            dynamicVariable = "Mahfuz Ahmed"; // Thats possible first assign int and second time assign string type.
+            Console.WriteLine(dynamicVariable + " Type is " + dynamicVariable.GetType());
+            dynamicVariable = true;
+            Console.WriteLine(dynamicVariable + " Type is " + dynamicVariable.GetType());
+
+            dynamicVariable = new Student();   // its possible to refer object in the dynamicVariable referance
+            dynamicVariable.Email = "mahfuz@gmail.com"; // if you refer any specific object must be match to propertyName and type
+
+            // Here is dynamic object create no need to match property name and type you can declear property name and type for your need
+
+            dynamicVariable = new ExpandoObject();
+            dynamicVariable.Name = "Mahfuz Ahmed";
+            dynamicVariable.ID = 171336;
+            dynamicVariable.IsAdmin = true;
+
+            Console.WriteLine(dynamicVariable.Name +" "+ dynamicVariable.IsAdmin);
+
         }
-    
     }
+
 }
