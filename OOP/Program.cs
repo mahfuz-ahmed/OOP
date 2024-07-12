@@ -21,6 +21,7 @@ namespace OOP
             assign.BankingSystem();
             assign.Interface();
             assign.DynamicDataType();
+            assign.AnonymousType();
             Console.ReadLine(); 
         }
     }

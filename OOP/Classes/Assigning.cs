@@ -221,6 +221,11 @@ namespace OOP.Classes
             var id = 112244; // int
             var IsAdmin = true; //boolean
 
+            // Var vs Dynamic
+            // * Var is static type Dynamic is dynamic type
+            // * Var is compiler type Dynamic is run type 
+            // * Must be innitialize value When declear Var Dynamic type no need to assign value in the declaration time.
+
         }      
         public void DynamicDataType()
         {
@@ -242,6 +247,41 @@ namespace OOP.Classes
             dynamicVariable.IsAdmin = true;
 
             Console.WriteLine(dynamicVariable.Name +" "+ dynamicVariable.IsAdmin);
+
+        }
+        public void AnonymousType()
+        {
+            // * it's derrived from System.object Class
+            // * It can contain read only property
+            // * Its a referance type
+            // * VS inteligency supported 
+
+            // * Limitation....
+            // * can not initialize a null value
+            // * does not declear class member such as methods
+
+            var anonyMosuTypeStudent = new 
+            {
+                Name= "Mahfuz Ahmed",
+                Id = 171,
+                IsAdmin = true,
+            };
+            Console.WriteLine(anonyMosuTypeStudent.Name);
+
+            // AnonymousList
+            // * Must be follow declear property sequence and data type
+            var anonymousStudentList = new[]
+            {
+                new{Name="Mahfuz",Id=12354,IsAdmin=true},
+                new{Name="Mahfuz",Id=12354,IsAdmin=true},
+            };
+            
+            foreach (var anonymousStudent in anonymousStudentList)
+            {
+                Console.WriteLine(anonymousStudent.Name);
+                Console.WriteLine(anonymousStudent.Id);
+                Console.WriteLine(anonymousStudent.IsAdmin);
+            }
 
         }
     }
