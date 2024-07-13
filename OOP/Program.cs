@@ -24,6 +24,9 @@ namespace OOP
             assign.AnonymousType();
             assign.Enum();
             assign.GenericType();
+            assign.DelegatesAssign();
+
+
             Console.ReadLine();
         }
     }

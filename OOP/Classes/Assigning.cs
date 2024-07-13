@@ -148,7 +148,7 @@ namespace OOP.Classes
 
             Console.WriteLine("Saving Account");
 
-            SavingsAccount savingsAccount = new SavingsAccount("MH-12334","MahfuzAhmed",1000);
+            SavingsAccount savingsAccount = new SavingsAccount("MH-12334", "MahfuzAhmed", 1000);
             //savingsAccount.BankAccount = "Mh-123455";
             //savingsAccount.CustomerName = "Mahfuz Ahmed";
             //savingsAccount.InterestAmount = 500;
@@ -156,7 +156,7 @@ namespace OOP.Classes
             Console.WriteLine(savingsAccount.Withdraw(1500));
 
             Console.WriteLine("Chgecking Account, No limit to withdrow mony");
-            CheckingAccount checkingAccount = new CheckingAccount("MH-122333","Najmus Sakib",500);
+            CheckingAccount checkingAccount = new CheckingAccount("MH-122333", "Najmus Sakib", 500);
             //checkingAccount.BankAccount = "Mh-45667889";
             //checkingAccount.ServiceCharge = 300;
             //checkingAccount.Deposit(1000);
@@ -167,7 +167,7 @@ namespace OOP.Classes
             bankAcount.CustomerName = "Sakib";
             bankAcount.Deposit(700);
 
-            List<BankAcount> bankAcounts = new List<BankAcount>();   
+            List<BankAcount> bankAcounts = new List<BankAcount>();
             bankAcounts.Add(bankAcount);
             bankAcounts.Add(checkingAccount);
             bankAcounts.Add(savingsAccount);
@@ -228,11 +228,11 @@ namespace OOP.Classes
             // * Var is compiler type Dynamic is run type 
             // * Must be innitialize value When declear Var Dynamic type no need to assign value in the declaration time.
 
-        }      
+        }
         public void DynamicDataType()
         {
             dynamic dynamicVariable = 1; // dynamic data type is run time data type. its work like obejct. dynamic keyword is this syntex.
-            Console.WriteLine(dynamicVariable + " Type is " +dynamicVariable.GetType());
+            Console.WriteLine(dynamicVariable + " Type is " + dynamicVariable.GetType());
             dynamicVariable = "Mahfuz Ahmed"; // Thats possible first assign int and second time assign string type.
             Console.WriteLine(dynamicVariable + " Type is " + dynamicVariable.GetType());
             dynamicVariable = true;
@@ -248,7 +248,7 @@ namespace OOP.Classes
             dynamicVariable.ID = 171336;
             dynamicVariable.IsAdmin = true;
 
-            Console.WriteLine(dynamicVariable.Name +" "+ dynamicVariable.IsAdmin);
+            Console.WriteLine(dynamicVariable.Name + " " + dynamicVariable.IsAdmin);
 
         }
         public void AnonymousType()
@@ -262,9 +262,9 @@ namespace OOP.Classes
             // * can not initialize a null value
             // * does not declear class member such as methods
 
-            var anonyMosuTypeStudent = new 
+            var anonyMosuTypeStudent = new
             {
-                Name= "Mahfuz Ahmed",
+                Name = "Mahfuz Ahmed",
                 Id = 171,
                 IsAdmin = true,
             };
@@ -277,7 +277,7 @@ namespace OOP.Classes
                 new{Name="Mahfuz",Id=12354,IsAdmin=true},
                 new{Name="Mahfuz",Id=12354,IsAdmin=true},
             };
-            
+
             foreach (var anonymousStudent in anonymousStudentList)
             {
                 Console.WriteLine(anonymousStudent.Name);
@@ -298,7 +298,7 @@ namespace OOP.Classes
 
             var approvedStatus = 0;
 
-            if(approvedStatus == (int)Enumeration.Approved)
+            if (approvedStatus == (int)Enumeration.Approved)
             {
                 Console.WriteLine("File Approved Completed");
             }
@@ -321,11 +321,11 @@ namespace OOP.Classes
         }
         public void GenericType()
         {
-           // * IsAdmin is generic type. Its support multiple data type when call must be declear what kind of type you want
-           Generics<int> generics = new Generics<int>();
+            // * IsAdmin is generic type. Its support multiple data type when call must be declear what kind of type you want
+            Generics<int> generics = new Generics<int>();
             generics.ID = 1010;
             generics.Name = "Mahfuz Ahmd";
-            generics.IsAdmin = 1;   
+            generics.IsAdmin = 1;
 
             var generics1 = new Generics<string>()
             {
@@ -351,12 +351,50 @@ namespace OOP.Classes
             //Console.WriteLine(generics2.ID +" "+ generics2.Name+" "+ generics2.IsAdmin);
 
         }
-        public void GenericTypePrint<T>(Generics<T> generics) 
+        public void GenericTypePrint<T>(Generics<T> generics)
         {
             // * recive multyple data type in this method
             Console.WriteLine(generics.ID + " " + generics.Name + " " + generics.IsAdmin);
         }
+        public void DelegatesAssign()
+        {
+            // * Delegates can pass method as parameter
+            // * It's Use to call back method
+
+            //....Define Delegates.....//
+            // * Set a targed method
+            // * Invoke delegate
+            // * Delegate method and targed Method have same type of parameter
+
+            //...Type Of Delegates...//
+            // * Single Delegate
+            // * Multicast Delegate
+            // * Generic Delegate
+
+            DelegateCalculator calculator = AddMethod;  // Sigle Delegate
+            InvokeDelegates(calculator,12,12);
+
+            DelegateCalculator calculator1 = SubMethod;
+            InvokeDelegates(calculator1,12,12);
+            //var result = calculator.Invoke(12, 12);
+            //Console.WriteLine("Delegate Method Result: "+result);
+        }
+
+        public delegate int DelegateCalculator(int firstNumber, int secondNumber);
+        public int AddMethod(int firstNumber, int secondNumber)
+        {
+            return firstNumber + secondNumber;
+        }
+        public int SubMethod(int firstNumber, int secondNumber)
+        {
+            return firstNumber - secondNumber;
+        }
+        public void InvokeDelegates(DelegateCalculator calculator,int fName, int sName)
+        {
+            int result = calculator.Invoke(fName, sName);
+            Console.WriteLine("Delegate Method Result: " + result);
+
+        }
 
     }
-
 }
