@@ -4,8 +4,10 @@ using System;
 using System.Collections.Generic;
 using System.Dynamic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Serialization;
 
 namespace OOP.Classes
 {
@@ -284,6 +286,77 @@ namespace OOP.Classes
             }
 
         }
+        public void Enum()
+        {
+            // * Enumaration (enums) is a strongly Typed constants
+            // * enums make code more readable and understandable
+            // * Its Can be defined using the enum keyword
+
+            Console.WriteLine((int)Enumeration.Approved);
+            Console.WriteLine((int)Enumeration.Pending);
+            Console.WriteLine((int)Enumeration.Delayed);
+
+            var approvedStatus = 0;
+
+            if(approvedStatus == (int)Enumeration.Approved)
+            {
+                Console.WriteLine("File Approved Completed");
+            }
+
+        }
+        public void StaticAssign()
+        {
+            //Non Static Class
+
+            StaticStudent.NumberOfStudent = 10;    // Static field is the class level field when declear class show there static field 
+            StaticStudent staticStudent = new StaticStudent();
+            staticStudent.Name = "Mahfuz";
+            staticStudent.ID = 1;
+            //staticStudent.NumberOfStudent = 10;  // you can't assign static field by create an instance.
+
+            //Static Class Can't Crate Object
+            StaticStudentClass.Name = "Mahfuz Ahmed";
+            StaticStudentClass.ID = 1;
+            StaticStudentClass.NumberOfStudent = 10;
+        }
+        public void GenericType()
+        {
+           // * IsAdmin is generic type. Its support multiple data type when call must be declear what kind of type you want
+           Generics<int> generics = new Generics<int>();
+            generics.ID = 1010;
+            generics.Name = "Mahfuz Ahmd";
+            generics.IsAdmin = 1;   
+
+            var generics1 = new Generics<string>()
+            {
+                ID = 1010,
+                Name = "Mahfuz Ahmed",
+                IsAdmin = "True-String",
+            };
+
+            var generics2 = new Generics<bool>()
+            {
+                ID = 1010,
+                Name = "Mahfuz Ahmed",
+                IsAdmin = true,
+
+            };
+
+            GenericTypePrint(generics);
+            GenericTypePrint(generics1);
+            GenericTypePrint(generics2);
+
+            //Console.WriteLine(generics.ID +" "+ generics.Name+" "+ generics.IsAdmin);
+            //Console.WriteLine(generics1.ID +" "+ generics1.Name+" "+ generics1.IsAdmin);
+            //Console.WriteLine(generics2.ID +" "+ generics2.Name+" "+ generics2.IsAdmin);
+
+        }
+        public void GenericTypePrint<T>(Generics<T> generics) 
+        {
+            // * recive multyple data type in this method
+            Console.WriteLine(generics.ID + " " + generics.Name + " " + generics.IsAdmin);
+        }
+
     }
 
 }

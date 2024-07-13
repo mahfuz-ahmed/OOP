@@ -22,7 +22,9 @@ namespace OOP
             assign.Interface();
             assign.DynamicDataType();
             assign.AnonymousType();
-            Console.ReadLine(); 
+            assign.Enum();
+            assign.GenericType();
+            Console.ReadLine();
         }
     }
 }

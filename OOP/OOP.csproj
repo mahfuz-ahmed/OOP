@@ -49,6 +49,8 @@
     <Compile Include="Classes\Assigning.cs" />
     <Compile Include="Classes\Constructor.cs" />
     <Compile Include="Classes\Encapsulation&amp;Constructor.cs" />
+    <Compile Include="Classes\Enumeration.cs" />
+    <Compile Include="Classes\Generics.cs" />
     <Compile Include="Classes\Information.cs" />
     <Compile Include="Classes\Inheritance\BankAcount.cs" />
     <Compile Include="Classes\Inheritance\CheckingAccount.cs" />
@@ -61,6 +63,7 @@
     <Compile Include="Classes\OneToManyRelation\Course.cs" />
     <Compile Include="Classes\OneToManyRelation\Department.cs" />
     <Compile Include="Classes\Person.cs" />
+    <Compile Include="Classes\StaticStudent.cs" />
     <Compile Include="Classes\ValueType_RefferenceType.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
