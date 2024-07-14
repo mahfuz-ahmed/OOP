@@ -12,8 +12,8 @@ namespace OOP.Classes
         // * enums make code more readable and understandable
         // * Its Can be defined using the enum keyword
 
-        Approved,            // by default approved value is 0 you can set value if you want
-        Pending,             // default value 1
-        Delayed,             // default value 2
+        Approved,       // by default approved value is 0 you can set value if you want
+        Pending,        // default value 1
+        Delayed,        // default value 2
     }
 }

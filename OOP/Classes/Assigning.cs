@@ -395,6 +395,15 @@ namespace OOP.Classes
             Console.WriteLine("Delegate Method Result: " + result);
 
         }
+        public void Extension()
+        {
+            Student student = new Student();
+            student.Name = "Mahfuz Ahmed";
+            student.Email = "mahfuz@gmail.com";
+            student.Roll = "1234";
 
+            var info = student.getInfo();
+            Console.WriteLine("Extension Person Class: "+info);
+        }
     }
 }
